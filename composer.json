@@ -42,7 +42,8 @@
     "name": "zetacomponents/url",
     "type": "library",
     "require": {
-        "zetacomponents/base": "~1.8"
+        "zetacomponents/base": "~1.8",
+        "phpunit/phpunit": "^7.5"
     },
     "require-dev": {
         "zetacomponents/unit-test": "*"

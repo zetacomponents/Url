@@ -1037,7 +1037,7 @@ class ezcUrlTest extends ezcTestCase
 
     public static function suite()
     {
-         return new PHPUnit_Framework_TestSuite( "ezcUrlTest" );
+         return new PHPUnit\Framework\TestSuite( "ezcUrlTest" );
     }
 }
 ?>

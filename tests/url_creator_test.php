@@ -82,7 +82,7 @@ class ezcUrlCreatorTest extends ezcTestCase
 
     public static function suite()
     {
-         return new PHPUnit_Framework_TestSuite( "ezcUrlCreatorTest" );
+         return new PHPUnit\Framework\TestSuite( "ezcUrlCreatorTest" );
     }
 }
 ?>
