@@ -42,10 +42,10 @@
     "name": "zetacomponents/url",
     "type": "library",
     "require": {
-        "zetacomponents/base": "~1.8",
-        "phpunit/phpunit": "^7.5"
+        "zetacomponents/base": "~1.8"
     },
     "require-dev": {
-        "zetacomponents/unit-test": "*"
+        "zetacomponents/unit-test": "*",
+        "phpunit/phpunit": "^7.5"
     }
 }
