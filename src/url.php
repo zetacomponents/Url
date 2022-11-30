@@ -9,9 +9,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -103,7 +103,7 @@
  *
  * $url = new ezcUrl( 'http://www.example.com/mydir/shop/index.php/order/Software/PHP/Version/5.2/Extension/XDebug/Extension/openssl', $urlCfg );
  *
- * $params = $url->getParams(); // will be array( 'Software', 'PHP', 'Version', '5.2', 'Extension', 'XDebug', 'Extension', 'openssl' ) 
+ * $params = $url->getParams(); // will be array( 'Software', 'PHP', 'Version', '5.2', 'Extension', 'XDebug', 'Extension', 'openssl' )
  * </code>
  *
  * @property string $host
@@ -157,7 +157,10 @@ class ezcUrl
      */
     public function __construct( $url = null, ezcUrlConfiguration $configuration = null )
     {
-        $this->parseUrl( $url );
+        if ( $url !== null )
+        {
+            $this->parseUrl( $url );
+        }
         $this->configuration = $configuration;
         if ( $configuration != null )
         {
@@ -767,7 +770,7 @@ class ezcUrl
                 {
                     $this->properties['uparams'][$name] = array();
                 }
-                    
+
                 if ( is_array( $value ) )
                 {
                     $multiple = false;

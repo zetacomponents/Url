@@ -9,9 +9,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -176,8 +176,8 @@ class ezcUrlConfiguration
      */
     public function __construct()
     {
-        $this->basedir = null;
-        $this->script = null;
+        $this->basedir = '';
+        $this->script = '';
         $this->unorderedDelimiters = array( '(', ')' );
         $this->orderedParameters = array();
         $this->unorderedParameters = array();
@@ -262,6 +262,8 @@ class ezcUrlConfiguration
         {
             case 'basedir':
             case 'script':
+                return isset( $this->properties[$name] ) && $this->properties[$name] != '';
+
             case 'unorderedDelimiters':
             case 'orderedParameters':
             case 'unorderedParameters':
